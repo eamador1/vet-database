@@ -1,3 +1,8 @@
+/* GENERATE AN ID AUTOMATICALLY */
+
+ALTER TABLE animals 
+ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY;
+
 /* Populate database with sample data. */
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES
