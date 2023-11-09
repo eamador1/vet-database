@@ -13,6 +13,8 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 BEGIN;
 UPDATE animals
 SET species = 'Unspecified';
+-- Select statement to verify the update
+SELECT * FROM animals WHERE species = 'Unspecified';
 ROLLBACK;
 
 /* Name Species */
@@ -21,12 +23,14 @@ UPDATE animals
 SET species='digimon' 
 WHERE
 name LIKE '%mon';
+SELECT species from animals; -- verify that change was made
 
 UPDATE animals
 SET species = 'pokemon'
-WHERE name NOT LIKE '%mon';
-
-COMMIT WORK;
+WHERE species IS NULL; 
+SELECT species from animals; -- verify that change was made
+COMMIT;
+SELECT species from animals; -- verify that change persists after commit
 
 /* Delete all animals born after Jan 1st, 2022 */
 BEGIN;
@@ -40,17 +44,21 @@ SAVEPOINT my_savepoint;
 /* Update all animals' weight to be their weight multiplied by -1 */
 UPDATE animals
 SET weight_kg = weight_kg * -1;
+SELECT * FROM animals;
 
 /* Rollback to the savepoint */
 ROLLBACK TO my_savepoint;
+SELECT * FROM animals;
 
 /* Update all animals' weights that are negative to be their weight multiplied by -1 */
 UPDATE animals
 SET weight_kg = weight_kg * -1
 WHERE weight_kg < 0;
+SELECT * FROM animals;
 
 /* Commit transaction */
-COMMIT WORK;
+COMMIT;
+SELECT * FROM animals;
 
 /* Total Animals */
 SELECT COUNT(*) FROM animals;
