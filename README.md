@@ -19,8 +19,7 @@
 
 # 📖 [VET-DATABASE] <a name="about-project"></a>
 
-> In this project, I use a relational database to create the initial data structure for a vet clinic. I create a table to store animals' information, insert some data into it, and query it.
-
+> In this project, I use transactions to update and delete records. I also use my knowledge of aggregate functions and GROUP BY to answer analytical questions.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>

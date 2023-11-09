@@ -9,3 +9,8 @@ neutered BOOLEAN,
 weight_kg REAL
 ) ;
 
+/* Add column species */
+
+ALTER TABLE animals
+ADD COLUMN species CHAR(20);
+
