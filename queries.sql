@@ -9,6 +9,25 @@ SELECT * FROM animals WHERE neutered=TRUE;
 SELECT * FROM animals WHERE name!='Gabumon';
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
+/* Inside a transaction update the animals table by setting the species column to unspecified. Then roll back  */
+BEGIN;
+UPDATE animals
+SET species = 'Unspecified';
+ROLLBACK;
+
+/* Name Species */
+BEGIN;
+UPDATE animals
+SET species='digimon' 
+WHERE
+name LIKE '%mon';
+
+UPDATE animals
+SET species = 'pokemon'
+WHERE name NOT LIKE '%mon';
+
+COMMIT WORK;
+
 /* Delete all animals born after Jan 1st, 2022 */
 BEGIN;
 DELETE FROM animals
