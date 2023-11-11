@@ -19,7 +19,7 @@
 
 # 📖 [VET-DATABASE] <a name="about-project"></a>
 
-> In this project I add some new tables and add foreign key columns to my existing animals table to model one-to-many relationships. Afterward, I use JOIN to query the data.
+> In this project, I add some many-to-many relationships and write more complex queries to use them to answer questions.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
