@@ -224,7 +224,7 @@ FROM
 LEFT JOIN
   specializations ON  vets.id = specializations.vet_id
 LEFT JOIN
-  species ON specializations.animal_id = species.id   
+  species ON specializations.species_id = species.id   
 ORDER BY
   vets.name, species.name;
 
@@ -305,7 +305,7 @@ LEFT JOIN
 LEFT JOIN
     specializations ON vets.id = specializations.vet_id
 LEFT JOIN
-species ON specializations.animal_id = species.id   
+species ON specializations.species_id = species.id   
 WHERE
     specializations.vet_id IS NULL
 GROUP BY
