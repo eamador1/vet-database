@@ -59,10 +59,10 @@ CREATE TABLE vets (
 /* Create a link table named specializations */
 CREATE TABLE specializations (
   vet_id INT,
-  animal_id INT,
-  PRIMARY KEY (vet_id, animal_id),
+  species_id INT,
+  PRIMARY KEY (vet_id, species_id),
   FOREIGN KEY (vet_id) REFERENCES vets(id),
-  FOREIGN KEY (animal_id) REFERENCES animals(id)
+  FOREIGN KEY (species_id) REFERENCES animals(id)
 );
 
 /* Create a link table named visits */
