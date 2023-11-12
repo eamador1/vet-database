@@ -124,7 +124,7 @@ INSERT INTO visits (vet_id, animal_id, date_of_visit) VALUES
 (1, 10, '2021-01-11');
 
 /* Insert data into specializations table */
-INSERT INTO  specializations (vet_id, animal_id) VALUES
+INSERT INTO  specializations (vet_id, species_id) VALUES
 (1, 1),
 (3,2),
 (3, 1),
