@@ -75,3 +75,15 @@ PRIMARY KEY (id),
 FOREIGN KEY (vet_id) REFERENCES vets(id),
 FOREIGN KEY (animal_id) REFERENCES animals(id)
 );
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+/* Indexing to improve database inquiring */
+
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+CREATE INDEX vet_id_asc ON visits(vet_id ASC);
+
+CREATE INDEX email_asc ON owners(email ASC);
+
