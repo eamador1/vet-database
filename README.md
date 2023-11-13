@@ -19,7 +19,7 @@
 
 # 📖 [VET-DATABASE] <a name="about-project"></a>
 
-> In this project, I add some many-to-many relationships and write more complex queries to use them to answer questions.
+> In this project, I optimize some slow queries in my database
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -30,9 +30,9 @@
 
 > Describe between 1-3 key features of the application.
 
-- **[CREATE TABLE TO STORE OWNERS AND SPECIES INFORMATION]**
+- **[ Add an email column to your owners table]**
 - **[INSERT DATA]**
-- **[MAKE QUERIES USING JOIN]**
+- **[USE EXPLAIN ANALYZE TO IMPROVE QUERIES PERFORMANCE]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,8 +63,6 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add More Tables]**
-- [ ] **[Database Performing Audit]**
 - [ ] **[Add Database Schema Diagram]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
