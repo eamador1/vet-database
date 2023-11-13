@@ -46,3 +46,32 @@ SELECT * FROM animals;
 COMMIT;
 ALTER TABLE animals ADD CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id);
 ALTER TABLE animals ADD CONSTRAINT fk_owners FOREIGN KEY(owner_id) REFERENCES owners(id);
+
+/* Create a link table named vets */
+CREATE TABLE vets (
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name CHAR(25),
+  age INT,
+  date_of_graduation DATE,
+  PRIMARY KEY(id)
+);
+
+/* Create a link table named specializations */
+CREATE TABLE specializations (
+  vet_id INT,
+  species_id INT,
+  PRIMARY KEY (vet_id, species_id),
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (species_id) REFERENCES animals(id)
+);
+
+/* Create a link table named visits */
+CREATE TABLE visits (
+id INT GENERATED ALWAYS AS IDENTITY,
+vet_id INT,
+animal_id INT,
+date_of_visit DATE,
+PRIMARY KEY (id),
+FOREIGN KEY (vet_id) REFERENCES vets(id),
+FOREIGN KEY (animal_id) REFERENCES animals(id)
+);
