@@ -59,6 +59,12 @@ Clone this repository to your desired folder:
 - Twitter: [@hokieamador](https://twitter.com/hokieamador)
 - LinkedIn: [hokiemador](https://linkedin.com/in/hokiemador)
 
+👤 **Peter Mwovi**
+
+- GitHub: [@githubhandle](https://github.com/peter-mwovi/)
+- Twitter: [@twitterhandle](https://twitter.com/mwovi_peter)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/peter-mwovi-57141a179/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
